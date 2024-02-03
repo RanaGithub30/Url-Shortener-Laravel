@@ -1,0 +1,42 @@
+#main_content{
+    height: auto;
+    width: 80%;
+}
+
+#main_content1{
+     height: 65px;
+     margin-left: 25%;
+     border: 2px solid blue;
+}
+
+#main_content2, #main_content2b{
+     height: 65px;
+     margin-left: 50%;
+     border: 2px solid blue;
+}
+
+/* #main_content3{
+    position: relative;
+    top: -20px;
+    left: 35px;
+    font-weight: bold;
+} */
+
+#main_content0{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+}
+
+#old_url{
+    margin-left: 250px;
+    margin-top: 5px;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+#main_content4{
+    margin-top: 10px;
+    margin-left: 350px;
+    position: relative;
+}
