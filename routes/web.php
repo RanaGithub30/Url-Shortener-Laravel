@@ -16,7 +16,8 @@ use App\Http\Controllers\ShortenLinkController;
 
 Route::get('/', function () {
     $url = "";
-    return view('home', compact('url'));
+    $message = "";
+    return view('home', compact('url', 'message'));
 });
 
 Route::post('shorten-url', [ShortenLinkController::class, 'shorten_url']);

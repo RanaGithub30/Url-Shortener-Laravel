@@ -5,6 +5,14 @@
     <h2>Short URL</h2>
 </div>
 
+<div class="text-center">
+    @if ($message != "")
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ $message }}
+      </div>
+    @endif
+</div>
+
 <div class="text-center border border-2 p-2" id="main_content0">
      <h2>Paste the URL to be shortened</h2><br>
 

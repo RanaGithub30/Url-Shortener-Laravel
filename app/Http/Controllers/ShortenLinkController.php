@@ -10,7 +10,14 @@ class ShortenLinkController extends Controller
 {
     //
 
+    function isValidUrl($url) {
+        // Use filter_var to check if the given text is a valid URL
+        return filter_var($url, FILTER_VALIDATE_URL) !== false;
+    }
+
     public function shorten_url(Request $request){
+
+        if ($this->isValidUrl($request->main_url)) {
         $baseUrl = url('/');
         $length = 8;
         $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -37,7 +44,13 @@ class ShortenLinkController extends Controller
             $url = UrlShorten::where('old_url', $request->main_url)->first();
         }
 
-        return view('home', compact('url'));
+        $message = "";
+      }else{
+        $url = "";
+        $message = "The given Url is Not Valid";
+      }
+
+      return view('home', compact('url', 'message'));
     }
 
     public function get_url($no){
